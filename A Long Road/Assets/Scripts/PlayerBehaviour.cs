@@ -9,9 +9,12 @@ public class PlayerBehaviour : MonoBehaviour
     private Rigidbody2D rb;
     private Animator myAnimator;
     private AnimatorClipInfo[] myClipInfo;
+    private DialogueTrigger npcTrigger;
+    private DialogueManager dialogueManager;
     private SpriteRenderer myRenderer;
 
     private bool isTurned;
+    public bool inDialogue;
 
     Vector2 movement;
     Vector2 direction;
@@ -28,6 +31,7 @@ public class PlayerBehaviour : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         myRenderer = GetComponent<SpriteRenderer>();
+        dialogueManager = FindObjectOfType<DialogueManager>();
     }
 
     // Update is called once per frame
@@ -61,9 +65,19 @@ public class PlayerBehaviour : MonoBehaviour
 
         direction = movement.normalized;
 
-        //if (Input.GetKeyDown(KeyCode.E))
-        //    CheckInteraction();
-        //
+        if (Input.GetKeyDown(KeyCode.E) && npcTrigger != null)
+        {
+            if(!inDialogue)
+            {
+                npcTrigger.TriggerDialogue();
+                inDialogue = true;
+            }
+            else
+            {
+                dialogueManager.DisplayNextSentence(); 
+            }
+        }
+
     }
 
     void FixedUpdate()
@@ -76,8 +90,8 @@ public class PlayerBehaviour : MonoBehaviour
         {
             case "NPC":
                 collision.GetComponent<SpriteRenderer>().color = Color.red;
-             //   cursorSpriteObject.GetComponent<SpriteRenderer>().sprite = variavel futura de tipo sprite
-
+                //   cursorSpriteObject.GetComponent<SpriteRenderer>().sprite = variavel futura de tipo sprite
+                npcTrigger = collision.GetComponent<DialogueTrigger>();
                 //change cursor sprite to NPC sprite
                 break;
 
@@ -100,5 +114,8 @@ public class PlayerBehaviour : MonoBehaviour
         collision.GetComponent<SpriteRenderer>().color = Color.black;
         cursorSpriteObject.GetComponent<SpriteRenderer>().enabled = false;
         //destctivate sprite component cursor
+        dialogueManager.EndDialogue();
+        inDialogue = false;
+        npcTrigger = null;
     }
 }
