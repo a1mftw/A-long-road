@@ -29,10 +29,14 @@ MonoBehaviour:
     width: 1904
     height: 981
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Hierarchy
   m_RootView: {fileID: 7}
+<<<<<<< HEAD
   m_MinSize: {x: 875, y: 392}
 >>>>>>> main
+=======
+  m_MinSize: {x: 875, y: 300}
+>>>>>>> Tiago
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
 --- !u!114 &2
@@ -106,11 +110,15 @@ MonoBehaviour:
 =======
     width: 1904
     height: 931
-  m_MinSize: {x: 779, y: 342}
-  m_MaxSize: {x: 16004, y: 8042}
+  m_MinSize: {x: 781, y: 342}
+  m_MaxSize: {x: 16006, y: 8042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 15646
 >>>>>>> main
+=======
+  controlID: 27
+>>>>>>> Tiago
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -136,9 +144,14 @@ MonoBehaviour:
     y: 0
     width: 381
     height: 931
+<<<<<<< HEAD
 >>>>>>> main
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+>>>>>>> Tiago
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -167,9 +180,14 @@ MonoBehaviour:
 =======
     width: 201
     height: 660
+<<<<<<< HEAD
 >>>>>>> main
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+>>>>>>> Tiago
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -248,8 +266,12 @@ MonoBehaviour:
 =======
     width: 1904
     height: 981
+<<<<<<< HEAD
   m_MinSize: {x: 875, y: 392}
 >>>>>>> main
+=======
+  m_MinSize: {x: 875, y: 300}
+>>>>>>> Tiago
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -339,11 +361,15 @@ MonoBehaviour:
 =======
     width: 1523
     height: 931
-  m_MinSize: {x: 504, y: 342}
-  m_MaxSize: {x: 12004, y: 8042}
+  m_MinSize: {x: 505, y: 342}
+  m_MaxSize: {x: 12005, y: 8042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 15647
 >>>>>>> main
+=======
+  controlID: 28
+>>>>>>> Tiago
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -374,11 +400,15 @@ MonoBehaviour:
 =======
     width: 1523
     height: 660
-  m_MinSize: {x: 504, y: 221}
-  m_MaxSize: {x: 12004, y: 4021}
+  m_MinSize: {x: 505, y: 221}
+  m_MaxSize: {x: 12005, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 15648
 >>>>>>> main
+=======
+  controlID: 29
+>>>>>>> Tiago
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -816,8 +846,12 @@ MonoBehaviour:
 =======
     m_SelectedIDs: 4c410000
     m_LastClickedID: 16716
+<<<<<<< HEAD
     m_ExpandedIDs: 000000003a41000000ca9a3b
 >>>>>>> main
+=======
+    m_ExpandedIDs: 0000000092410000
+>>>>>>> Tiago
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -846,10 +880,14 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 000000003c410000
 =======
     m_ExpandedIDs: 000000003a410000
 >>>>>>> main
+=======
+    m_ExpandedIDs: 0000000092410000
+>>>>>>> Tiago
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -996,6 +1034,7 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_SelectedIDs: 6651feff
       m_LastClickedID: 0
       m_ExpandedIDs: fcfafffffefaffff
@@ -1004,20 +1043,25 @@ MonoBehaviour:
       m_LastClickedID: 0
       m_ExpandedIDs: dadfffff4ee0ffff98e2ffff5ee3ffff9cf7ffff3efbffff40fbffff
 >>>>>>> main
+=======
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 40fbffff
+>>>>>>> Tiago
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: DialogueBox
-        m_OriginalName: DialogueBox
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -8114
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
