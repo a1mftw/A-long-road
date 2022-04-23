@@ -63,7 +63,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         //if (Input.GetKeyDown(KeyCode.E))
         //    CheckInteraction();
-
+        //
     }
 
     void FixedUpdate()
