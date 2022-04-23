@@ -114,10 +114,14 @@ MonoBehaviour:
   m_MaxSize: {x: 16006, y: 8042}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 15646
 >>>>>>> main
 =======
   controlID: 27
+>>>>>>> Tiago
+=======
+  controlID: 40
 >>>>>>> Tiago
 --- !u!114 &4
 MonoBehaviour:
@@ -365,10 +369,14 @@ MonoBehaviour:
   m_MaxSize: {x: 12005, y: 8042}
   vertical: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 15647
 >>>>>>> main
 =======
   controlID: 28
+>>>>>>> Tiago
+=======
+  controlID: 75
 >>>>>>> Tiago
 --- !u!114 &11
 MonoBehaviour:
@@ -404,10 +412,14 @@ MonoBehaviour:
   m_MaxSize: {x: 12005, y: 4021}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 15648
 >>>>>>> main
 =======
   controlID: 29
+>>>>>>> Tiago
+=======
+  controlID: 76
 >>>>>>> Tiago
 --- !u!114 &12
 MonoBehaviour:
@@ -1046,7 +1058,11 @@ MonoBehaviour:
 =======
       m_SelectedIDs: 
       m_LastClickedID: 0
+<<<<<<< HEAD
       m_ExpandedIDs: 40fbffff
+>>>>>>> Tiago
+=======
+      m_ExpandedIDs: 3efbffff40fbffff
 >>>>>>> Tiago
       m_RenameOverlay:
         m_UserAcceptedRename: 0
