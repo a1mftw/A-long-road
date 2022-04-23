@@ -244,8 +244,9 @@ Transform:
   m_GameObject: {fileID: 78579515}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.004, y: -2.784, z: -0.0217}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
-  m_Children: []
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_Children:
+  - {fileID: 1729244966}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -262,6 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  inDialogue: 0
   cursorSpriteObject: {fileID: 1462950769}
   cursorSprites:
   - {fileID: 0}
@@ -338,13 +340,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: e56a342a00a8a4f4e980fc1141837aa5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_DrawMode: 2
+  m_Size: {x: 44.73228, y: 26.43428}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -358,8 +360,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 107902401}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -674.13, y: -314.1955, z: 1}
-  m_LocalScale: {x: 15.417283, y: 11.141521, z: 1.6916}
+  m_LocalPosition: {x: -673.9, y: -315.2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1.6916}
   m_Children: []
   m_Father: {fileID: 538357655}
   m_RootOrder: 0
@@ -854,6 +856,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a96e7dfc4c861d04fb8bd83dc1bdaadb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameText: {fileID: 0}
+  dialogueText: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!4 &603292415
 Transform:
   m_ObjectHideFlags: 0
@@ -961,6 +966,7 @@ GameObject:
   - component: {fileID: 1141447005}
   - component: {fileID: 1141447004}
   - component: {fileID: 1141447006}
+  - component: {fileID: 1141447007}
   m_Layer: 0
   m_Name: TestNPC
   m_TagString: NPC
@@ -1060,6 +1066,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9999987, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1141447007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141447003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b82a93d35c04e4429f52e67370336e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Doomer
+    sentences:
+    - Whatcha doin
+    - Get outta here
 --- !u!1 &1218155990
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,11 +1303,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729244965}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.104, y: -2.7414, z: -0.3317}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.31}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 78579519}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &1729244967
 AudioListener:
@@ -1321,7 +1344,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.7630295
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1348,6 +1371,7 @@ GameObject:
   - component: {fileID: 1889595540}
   - component: {fileID: 1889595539}
   - component: {fileID: 1889595538}
+  - component: {fileID: 1889595541}
   m_Layer: 0
   m_Name: TestNPC (1)
   m_TagString: NPC
@@ -1602,6 +1626,10 @@ PrefabInstance:
     - target: {fileID: 6132959536503832055, guid: ed6c50605c1981342b78c8d7931d040f, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6132959536503832055, guid: ed6c50605c1981342b78c8d7931d040f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6132959536641393429, guid: ed6c50605c1981342b78c8d7931d040f, type: 3}
       propertyPath: m_AnchoredPosition.x
