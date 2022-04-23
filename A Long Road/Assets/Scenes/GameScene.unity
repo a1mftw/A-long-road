@@ -245,7 +245,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.004, y: -2.784, z: -0.0217}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1729244966}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -262,6 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  inDialogue: 0
   cursorSpriteObject: {fileID: 1462950769}
   cursorSprites:
   - {fileID: 0}
@@ -854,6 +856,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a96e7dfc4c861d04fb8bd83dc1bdaadb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameText: {fileID: 0}
+  dialogueText: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!4 &603292415
 Transform:
   m_ObjectHideFlags: 0
@@ -961,6 +966,7 @@ GameObject:
   - component: {fileID: 1141447005}
   - component: {fileID: 1141447004}
   - component: {fileID: 1141447006}
+  - component: {fileID: 1141447007}
   m_Layer: 0
   m_Name: TestNPC
   m_TagString: NPC
@@ -1060,6 +1066,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9999987, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1141447007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141447003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b82a93d35c04e4429f52e67370336e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Doomer
+    sentences:
+    - Whatcha doin
+    - Get outta here
 --- !u!1 &1218155990
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,11 +1303,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729244965}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.104, y: -2.7414, z: -0.3317}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.31}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 78579519}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &1729244967
 AudioListener:
@@ -1348,6 +1371,7 @@ GameObject:
   - component: {fileID: 1889595540}
   - component: {fileID: 1889595539}
   - component: {fileID: 1889595538}
+  - component: {fileID: 1889595541}
   m_Layer: 0
   m_Name: TestNPC (1)
   m_TagString: NPC
