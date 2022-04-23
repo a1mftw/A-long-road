@@ -1,0 +1,104 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerBehaviour : MonoBehaviour
+{
+    public float moveSpeed = 5f;
+
+    private Rigidbody2D rb;
+    private Animator myAnimator;
+    private AnimatorClipInfo[] myClipInfo;
+    private SpriteRenderer myRenderer;
+
+    private bool isTurned;
+
+    Vector2 movement;
+    Vector2 direction;
+
+    public GameObject cursorSpriteObject;
+
+    public Sprite[] cursorSprites;
+    //int[3][3] arraydeints; [23, 534, 231, 3213]
+    //                       [242, 3256, 21, 4515]
+    //public int[] test;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        myAnimator = GetComponent<Animator>();
+        myRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+        myAnimator.SetFloat("xAxis", Input.GetAxisRaw("Horizontal"));
+        myAnimator.SetFloat("yAxis", Input.GetAxisRaw("Vertical"));
+
+
+        if (Input.GetAxisRaw("Vertical") > 0)
+            isTurned = true;
+        else if(Input.GetAxisRaw("Horizontal") < 0)
+            isTurned= false;
+        if (Input.GetAxisRaw("Horizontal") > 0)
+            myRenderer.flipX = true;
+        else if(Input.GetAxisRaw("Horizontal") < 0)
+            myRenderer.flipX = false;
+
+        if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0)
+        {
+            //idle check if turned
+            if (isTurned)
+                myAnimator.SetBool("isTurned", true);
+            else
+                myAnimator.SetBool("isTurned",false);
+        }
+        else
+            myAnimator.SetBool("isWalking", true);
+
+        direction = movement.normalized;
+
+        //if (Input.GetKeyDown(KeyCode.E))
+        //    CheckInteraction();
+        //
+    }
+
+    void FixedUpdate()
+    {
+        rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        switch (collision.transform.tag)
+        {
+            case "NPC":
+                collision.GetComponent<SpriteRenderer>().color = Color.red;
+             //   cursorSpriteObject.GetComponent<SpriteRenderer>().sprite = variavel futura de tipo sprite
+
+                //change cursor sprite to NPC sprite
+                break;
+
+            case "Interactible":
+                //change cursor sprite to Interactible sprite
+                break;
+
+            default:
+                break;
+
+        }
+
+        //move cursor to collision.transform.position
+        cursorSpriteObject.transform.position = collision.GetComponentInChildren<Transform>().position;
+        //activate sprite component
+        cursorSpriteObject.GetComponent<SpriteRenderer>().enabled = true;
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        collision.GetComponent<SpriteRenderer>().color = Color.black;
+        cursorSpriteObject.GetComponent<SpriteRenderer>().enabled = false;
+        //destctivate sprite component cursor
+    }
+}
