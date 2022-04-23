@@ -7,6 +7,11 @@ public class PlayerBehaviour : MonoBehaviour
     public float moveSpeed = 5f;
 
     private Rigidbody2D rb;
+    private Animator myAnimator;
+    private AnimatorClipInfo[] myClipInfo;
+    private SpriteRenderer myRenderer;
+
+    private bool isTurned;
 
     Vector2 movement;
     Vector2 direction;
@@ -21,6 +26,8 @@ public class PlayerBehaviour : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        myAnimator = GetComponent<Animator>();
+        myRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -28,6 +35,29 @@ public class PlayerBehaviour : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        myAnimator.SetFloat("xAxis", Input.GetAxisRaw("Horizontal"));
+        myAnimator.SetFloat("yAxis", Input.GetAxisRaw("Vertical"));
+
+
+        if (Input.GetAxisRaw("Vertical") > 0)
+            isTurned = true;
+        else if(Input.GetAxisRaw("Horizontal") < 0)
+            isTurned= false;
+        if (Input.GetAxisRaw("Horizontal") > 0)
+            myRenderer.flipX = true;
+        else if(Input.GetAxisRaw("Horizontal") < 0)
+            myRenderer.flipX = false;
+
+        if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0)
+        {
+            //idle check if turned
+            if (isTurned)
+                myAnimator.SetBool("isTurned", true);
+            else
+                myAnimator.SetBool("isTurned",false);
+        }
+        else
+            myAnimator.SetBool("isWalking", true);
 
         direction = movement.normalized;
 
