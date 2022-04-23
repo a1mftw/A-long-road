@@ -37,23 +37,26 @@ public class PlayerBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //movement and blend tree anims
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         myAnimator.SetFloat("xAxis", Input.GetAxisRaw("Horizontal"));
         myAnimator.SetFloat("yAxis", Input.GetAxisRaw("Vertical"));
 
-
+        //IdleTurned check
         if (Input.GetAxisRaw("Vertical") > 0)
             isTurned = true;
-        else if(Input.GetAxisRaw("Horizontal") < 0)
-            isTurned= false;
-        if (Input.GetAxisRaw("Horizontal") > 0)
-            myRenderer.flipX = true;
-        else if(Input.GetAxisRaw("Horizontal") < 0)
-            myRenderer.flipX = false;
+        else if (Input.GetAxisRaw("Vertical") <= 0)
+        {
+            if (Input.GetAxisRaw("Horizontal") > 0 || Input.GetAxisRaw("Horizontal") < 0 || Input.GetAxisRaw("Vertical") < 0)
+                isTurned = false;
+        }
+
 
         if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0)
         {
+            myAnimator.SetBool("isWalking", false);
+
             //idle check if turned
             if (isTurned)
                 myAnimator.SetBool("isTurned", true);
@@ -63,8 +66,16 @@ public class PlayerBehaviour : MonoBehaviour
         else
             myAnimator.SetBool("isWalking", true);
 
+        //flipping
+        if (Input.GetAxisRaw("Horizontal") > 0)
+            myRenderer.flipX = true;
+        else if(Input.GetAxisRaw("Horizontal") < 0)
+            myRenderer.flipX = false;
+
+        //movement
         direction = movement.normalized;
 
+        //interact
         if (Input.GetKeyDown(KeyCode.E) && npcTrigger != null)
         {
             if(!inDialogue)
