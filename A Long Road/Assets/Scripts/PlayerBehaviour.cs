@@ -100,7 +100,7 @@ public class PlayerBehaviour : MonoBehaviour
         switch (collision.transform.tag)
         {
             case "NPC":
-                collision.GetComponent<SpriteRenderer>().color = Color.red;
+               // collision.GetComponent<SpriteRenderer>().color = Color.red;
                 //   cursorSpriteObject.GetComponent<SpriteRenderer>().sprite = variavel futura de tipo sprite
                 npcTrigger = collision.GetComponent<DialogueTrigger>();
                 //change cursor sprite to NPC sprite
@@ -122,7 +122,7 @@ public class PlayerBehaviour : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        collision.GetComponent<SpriteRenderer>().color = Color.black;
+        //collision.GetComponent<SpriteRenderer>().color = Color.black;
         cursorSpriteObject.GetComponent<SpriteRenderer>().enabled = false;
         //destctivate sprite component cursor
         dialogueManager.EndDialogue();
