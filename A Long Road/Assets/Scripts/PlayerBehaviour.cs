@@ -103,6 +103,8 @@ public class PlayerBehaviour : MonoBehaviour
                // collision.GetComponent<SpriteRenderer>().color = Color.red;
                 //   cursorSpriteObject.GetComponent<SpriteRenderer>().sprite = variavel futura de tipo sprite
                 npcTrigger = collision.GetComponent<DialogueTrigger>();
+             
+                
                 //change cursor sprite to NPC sprite
                 break;
 
@@ -115,11 +117,28 @@ public class PlayerBehaviour : MonoBehaviour
 
         }
 
+        cursorSpriteObject.transform.parent = collision.transform;
         //move cursor to collision.transform.position
-        cursorSpriteObject.transform.position = collision.GetComponentInChildren<Transform>().position;
+        cursorSpriteObject.transform.localPosition = collision.GetComponentInChildren<Transform>().position;
+
+        cursorSpriteObject.transform.parent = null;
         //activate sprite component
         cursorSpriteObject.GetComponent<SpriteRenderer>().enabled = true;
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (transform.position.y > collision.transform.position.y && collision.CompareTag("NPC")) 
+        {
+            myRenderer.sortingOrder = -1;
+
+        }
+        else
+        {
+            myRenderer.sortingOrder = 1;
+        }
+    }
+      
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         //collision.GetComponent<SpriteRenderer>().color = Color.black;
@@ -129,4 +148,6 @@ public class PlayerBehaviour : MonoBehaviour
         inDialogue = false;
         npcTrigger = null;
     }
+
+
 }

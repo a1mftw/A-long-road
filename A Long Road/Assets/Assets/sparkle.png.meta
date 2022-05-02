@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 032476713e9e1f74aa6efa75bd30e6b1
+guid: 7b3317cbd0d28234f9415e7f0c3c63f4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1761722066470537003
-    second: fences_0
+      213: -2059823583270753353
+    second: sparkle_0
   - first:
-      213: -7793352843893472228
-    second: fences_1
+      213: -5886241038748846175
+    second: sparkle_1
   - first:
-      213: 7139555157472184269
-    second: fences_2
+      213: 6502619149759270755
+    second: sparkle_2
   - first:
-      213: 3405478928132641723
-    second: fences_3
+      213: -7924158313636417959
+    second: sparkle_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fences_0
+      name: sparkle_0
       rect:
         serializedVersion: 2
-        x: 903
-        y: 1983
-        width: 88
-        height: 502
+        x: 73
+        y: 69
+        width: 154
+        height: 156
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,20 +117,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2781fca2e4e27810800000000000000
-      internalID: 1761722066470537003
+      spriteID: 7bbac2b4d590a63e0800000000000000
+      internalID: -2059823583270753353
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fences_1
+      name: sparkle_1
       rect:
         serializedVersion: 2
-        x: 1041
-        y: 1998
-        width: 59
-        height: 210
+        x: 357
+        y: 70
+        width: 158
+        height: 155
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,20 +138,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c14037221e278d390800000000000000
-      internalID: -7793352843893472228
+      spriteID: 1a77c0f36fedf4ea0800000000000000
+      internalID: -5886241038748846175
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fences_2
+      name: sparkle_2
       rect:
         serializedVersion: 2
-        x: 1194
-        y: 2011
-        width: 168
-        height: 103
+        x: 645
+        y: 72
+        width: 153
+        height: 152
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc70077b69bc41360800000000000000
-      internalID: 7139555157472184269
+      spriteID: 36fcd031aa1fd3a50800000000000000
+      internalID: 6502619149759270755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fences_3
+      name: sparkle_3
       rect:
         serializedVersion: 2
-        x: 917
-        y: 1811
-        width: 536
-        height: 107
+        x: 910
+        y: 69
+        width: 155
+        height: 156
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,8 +180,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb39c69ca01b24f20800000000000000
-      internalID: 3405478928132641723
+      spriteID: 95e2ebb6ffbb70290800000000000000
+      internalID: -7924158313636417959
       vertices: []
       indices: 
       edges: []

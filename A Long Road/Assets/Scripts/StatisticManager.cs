@@ -8,6 +8,7 @@ public class StatisticManager : MonoBehaviour
 {
     public struct Action
     {
+        public string actionName;
         public int Slider1;
         public int Slider2;
         public int Slider3;
@@ -30,10 +31,11 @@ public class StatisticManager : MonoBehaviour
     {
         actionList = new List<Action>();
     }
-    public void AddNewAction(int value1, int value2, int value3, int value4, int value5, int value6)
+    public void AddNewAction(string name, int value1, int value2, int value3, int value4, int value5, int value6)
     {
         Action action = new Action()
         {
+            actionName = name,
             Slider1 = value1,
             Slider2 = value2,
             Slider3 = value3,
