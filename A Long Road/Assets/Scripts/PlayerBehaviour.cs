@@ -103,8 +103,6 @@ public class PlayerBehaviour : MonoBehaviour
                // collision.GetComponent<SpriteRenderer>().color = Color.red;
                 //   cursorSpriteObject.GetComponent<SpriteRenderer>().sprite = variavel futura de tipo sprite
                 npcTrigger = collision.GetComponent<DialogueTrigger>();
-             
-                
                 //change cursor sprite to NPC sprite
                 break;
 
@@ -117,11 +115,8 @@ public class PlayerBehaviour : MonoBehaviour
 
         }
 
-        cursorSpriteObject.transform.parent = collision.transform;
         //move cursor to collision.transform.position
-        cursorSpriteObject.transform.localPosition = collision.GetComponentInChildren<Transform>().position;
-
-        cursorSpriteObject.transform.parent = null;
+        cursorSpriteObject.transform.position = collision.GetComponentInChildren<Transform>().position - new Vector3(-1.2f,-1.2f);
         //activate sprite component
         cursorSpriteObject.GetComponent<SpriteRenderer>().enabled = true;
     }
