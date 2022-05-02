@@ -95,8 +95,8 @@ GameObject:
   - component: {fileID: 8666990952129468754}
   - component: {fileID: 8666990952129468753}
   - component: {fileID: 8666990952129468716}
-  - component: {fileID: 8666990952129468718}
   - component: {fileID: 8666990952129468752}
+  - component: {fileID: 8740382992303801563}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -209,22 +209,6 @@ MonoBehaviour:
   cursorSprites:
   - {fileID: 0}
   - {fileID: 0}
---- !u!58 &8666990952129468718
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8666990952129468759}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.04416138, y: 0.1952514}
-  serializedVersion: 2
-  m_Radius: 3.0053792
 --- !u!95 &8666990952129468752
 Animator:
   serializedVersion: 3
@@ -244,3 +228,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!70 &8740382992303801563
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8666990952129468759}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.44, y: -2.91}
+  m_Size: {x: 7.399316, y: 3.73435}
+  m_Direction: 1
