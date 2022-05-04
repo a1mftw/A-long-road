@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InventorySystem : MonoBehaviour
 {
@@ -86,6 +87,12 @@ public class InventorySystem : MonoBehaviour
 
     private void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            SceneManager.LoadScene(2);
+        }
+
         if (nextToObject && Input.GetKeyDown(KeyCode.E))
         {
             PickUp(go);
