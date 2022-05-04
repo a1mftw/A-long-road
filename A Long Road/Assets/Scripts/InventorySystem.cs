@@ -7,10 +7,11 @@ public class InventorySystem : MonoBehaviour
 {
 
 
-    bool ball = false;
-    bool ladder = false;
-    bool holding = false;
+    public bool ball = false;
+    public bool ladder = false;
+    public bool holding = false;
     bool nextToObject = false;
+    bool isflipped = false;
     GameObject go;
     GameObject holdingObject;
     public GameObject ladderPrefab;
@@ -88,10 +89,10 @@ public class InventorySystem : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            SceneManager.LoadScene(2);
-        }
+        //if (Input.GetKeyDown(KeyCode.A))
+        //{
+        //    SceneManager.LoadScene(2);
+        //}
 
         if (nextToObject && Input.GetKeyDown(KeyCode.E))
         {
@@ -103,6 +104,11 @@ public class InventorySystem : MonoBehaviour
         {
             Drop();
         }
+
+        if (Input.GetAxisRaw("Horizontal") > 0)
+            holder.transform.localPosition = new Vector2(2.1f, holder.transform.localPosition.y);
+        else if (Input.GetAxisRaw("Horizontal") < 0)
+            holder.transform.localPosition = new Vector2(-2.1f, holder.transform.localPosition.y);
 
     }
 
