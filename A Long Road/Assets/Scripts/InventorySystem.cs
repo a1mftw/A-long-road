@@ -63,12 +63,40 @@ public class InventorySystem : MonoBehaviour
         }
     }
 
+    public void Drop()
+    {
+        if (ladder)
+        {
+            ladder = false;
+            holdingObject.transform.parent = null;
+            holdingObject.GetComponent<BoxCollider2D>().enabled = true;
+        }
+        else if (ball)
+        {
+            ball = false;
+            holdingObject.transform.parent = null;
+            holdingObject.GetComponent<CircleCollider2D>().enabled = true;
+        }
+
+
+        holding = false;
+        holdingObject = null;
+    }
+
+
     private void Update()
     {
         if (nextToObject && Input.GetKeyDown(KeyCode.E))
         {
             PickUp(go);
         }
+
+
+        if (Input.GetKeyDown(KeyCode.Q) && holding)
+        {
+            Drop();
+        }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
