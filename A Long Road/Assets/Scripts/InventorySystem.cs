@@ -104,6 +104,11 @@ public class InventorySystem : MonoBehaviour
             Drop();
         }
 
+        if (Input.GetAxisRaw("Horizontal") > 0)
+            holdingObject.transform.localPosition = new Vector2(transform.localPosition.x * -1, transform.localPosition.y);
+        else if (Input.GetAxisRaw("Horizontal") < 0)
+            holdingObject.transform.localPosition = new Vector2(transform.localPosition.x, transform.localPosition.y);
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
