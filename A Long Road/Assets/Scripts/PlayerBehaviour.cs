@@ -100,11 +100,17 @@ public class PlayerBehaviour : MonoBehaviour
         switch (collision.transform.tag)
         {
             case "NPC":
-               // collision.GetComponent<SpriteRenderer>().color = Color.red;
+                // collision.GetComponent<SpriteRenderer>().color = Color.red;
                 //   cursorSpriteObject.GetComponent<SpriteRenderer>().sprite = variavel futura de tipo sprite
                 npcTrigger = collision.GetComponent<DialogueTrigger>();
                 //change cursor sprite to NPC sprite
+
+                //move cursor to collision.transform.position
+                cursorSpriteObject.transform.position = collision.GetComponentInChildren<Transform>().position - new Vector3(-1.2f, -1.2f);
+                //activate sprite component
+                cursorSpriteObject.GetComponent<SpriteRenderer>().enabled = true;
                 break;
+
 
             case "Interactible":
                 //change cursor sprite to Interactible sprite
@@ -114,12 +120,8 @@ public class PlayerBehaviour : MonoBehaviour
                 break;
 
         }
-
-        //move cursor to collision.transform.position
-        cursorSpriteObject.transform.position = collision.GetComponentInChildren<Transform>().position - new Vector3(-1.2f,-1.2f);
-        //activate sprite component
-        cursorSpriteObject.GetComponent<SpriteRenderer>().enabled = true;
     }
+       
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (transform.position.y > collision.transform.position.y && collision.CompareTag("NPC")) 
