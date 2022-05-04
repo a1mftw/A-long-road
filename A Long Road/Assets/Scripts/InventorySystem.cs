@@ -88,10 +88,10 @@ public class InventorySystem : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            SceneManager.LoadScene(2);
-        }
+        //if (Input.GetKeyDown(KeyCode.A))
+        //{
+        //    SceneManager.LoadScene(2);
+        //}
 
         if (nextToObject && Input.GetKeyDown(KeyCode.E))
         {
