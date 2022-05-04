@@ -13,6 +13,7 @@ public class UImanager : MonoBehaviour
     public Slider slider4;
     public Slider slider5;
     public Slider slider6;
+    public Text topText;
     StatisticManager manager;
     void Start()
     {
@@ -22,6 +23,16 @@ public class UImanager : MonoBehaviour
 
     void Populate()
     {
+
+        if (manager.actionList.Count > 0)
+        {
+            topText.text = "Great job out there! Its wonderful to see someone who isn't boring! Thank you for playing!";
+        }
+        else
+        {
+            topText.text = "Well, nothing I can do if you chose to leave, one must take the path they find right! Thank you for playing!";
+        }
+
         slider1.value = manager.Slider1;
         slider2.value = manager.Slider2;
         slider3.value = manager.Slider3;
