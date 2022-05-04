@@ -131,7 +131,7 @@ public class PlayerBehaviour : MonoBehaviour
         }
         else
         {
-            myRenderer.sortingOrder = 1;
+            myRenderer.sortingOrder = 99;
         }
     }
       
