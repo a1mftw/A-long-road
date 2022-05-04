@@ -124,7 +124,7 @@ public class PlayerBehaviour : MonoBehaviour
        
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (transform.position.y > collision.transform.position.y && collision.CompareTag("NPC")) 
+        if (transform.position.y > collision.transform.position.y && (collision.CompareTag("NPC") || collision.CompareTag("DepthObject")))
         {
             myRenderer.sortingOrder = -1;
 
