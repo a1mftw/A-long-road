@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: 701fba938048c8f4a96cd5d8a40bcd3b
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1244130279119729802
+    second: MC Reference SHeet - arm out 2_0
+  - first:
+      213: -4278729803921326258
+    second: MC Reference SHeet - arm out 2_1
+  - first:
+      213: 1493584082301759855
+    second: MC Reference SHeet - arm out 2_2
+  - first:
+      213: 2615428946417426487
+    second: MC Reference SHeet - arm out 2_3
+  - first:
+      213: -8110278630886380724
+    second: MC Reference SHeet - arm out 2_4
+  - first:
+      213: 1580255232537512707
+    second: MC Reference SHeet - arm out 2_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +50,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,7 +59,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +93,147 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: MC Reference SHeet - arm out 2_0
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 820
+        width: 415
+        height: 573
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67bc2c25a16fbbee0800000000000000
+      internalID: -1244130279119729802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC Reference SHeet - arm out 2_1
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 1033
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f746bb9e5ee94c0800000000000000
+      internalID: -4278729803921326258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC Reference SHeet - arm out 2_2
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 835
+        width: 352
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6136cb3fc64ab410800000000000000
+      internalID: 1493584082301759855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC Reference SHeet - arm out 2_3
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 196
+        width: 417
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7302c7605cedb4420800000000000000
+      internalID: 2615428946417426487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC Reference SHeet - arm out 2_4
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 212
+        width: 414
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b63982e80827f80800000000000000
+      internalID: -8110278630886380724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC Reference SHeet - arm out 2_5
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 249
+        width: 355
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30bc9dde2c13ee510800000000000000
+      internalID: 1580255232537512707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

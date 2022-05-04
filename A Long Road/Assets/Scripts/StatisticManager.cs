@@ -29,8 +29,13 @@ public class StatisticManager : MonoBehaviour
 
     public void Awake()
     {
+        DontDestroyOnLoad(transform.gameObject);
         actionList = new List<Action>();
     }
+
+
+
+    //Usar isto para adicionar uma nova acao
     public void AddNewAction(string name, int value1, int value2, int value3, int value4, int value5, int value6)
     {
         Action action = new Action()
@@ -46,7 +51,7 @@ public class StatisticManager : MonoBehaviour
     }
 
 
-
+    //antes de mudar de scene usar esta funcao para calcular o valor final
     public void CalculateStats()
     {
         foreach (var action in actionList)
@@ -64,8 +69,8 @@ public class StatisticManager : MonoBehaviour
     {
         if (slider + value > 100)
             slider = 100;
-        else if (slider + value < -100)
-            slider = -100;
+        else if (slider + value < 0)
+            slider = 0;
         else
             slider += value;
     }
