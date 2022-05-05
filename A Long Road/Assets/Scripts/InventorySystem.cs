@@ -32,7 +32,7 @@ public class InventorySystem : MonoBehaviour
             //action add
             if(!hasPickedBall)
             {
-                manager.AddNewAction("used the ball",100,100,100,100,100,100);
+                manager.AddNewAction("used the ball",20,0,10,10,0,10);
                 hasPickedBall = true;
             }
 
