@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -120,7 +121,7 @@ public class PlayerBehaviour : MonoBehaviour
                 //activate sprite component
                 cursorSpriteObject.GetComponent<SpriteRenderer>().enabled = true;
 
-                if (collision.name == "NPC (8)")
+                if (collision.name == "NPC (8)" && SceneManager.GetActiveScene().buildIndex == 1)
                 {
                     npcQuest = true;
                 }
