@@ -11,16 +11,25 @@ public class InventorySystem : MonoBehaviour
     public bool ladder = false;
     public bool holding = false;
     bool nextToObject = false;
+    private bool hasPickedBall = false;
     GameObject go;
     GameObject holdingObject;
     public GameObject ladderPrefab;
     public GameObject ballPrefab;
     public GameObject holder;
+    public StatisticManager manager;
 
     private void PickUp(GameObject item)
     {
         if (item.name.Contains("ball"))
         {
+            //action add
+            if(!hasPickedBall)
+            {
+                manager.AddNewAction("used the ball",100,100,100,100,100,100);
+                hasPickedBall = true;
+            }
+
             Drop(item.transform);
             ball = true;
             item.transform.parent = holder.transform;
@@ -88,10 +97,16 @@ public class InventorySystem : MonoBehaviour
     private void Update()
     {
 
-        //if (Input.GetKeyDown(KeyCode.A))
-        //{
-        //    SceneManager.LoadScene(2);
-        //}
+        if(Input.GetKeyDown(KeyCode.O))
+        {
+            manager.CalculateStats();
+        }
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+
+            SceneManager.LoadScene(2);
+        }
 
         if (nextToObject && Input.GetKeyDown(KeyCode.E))
         {

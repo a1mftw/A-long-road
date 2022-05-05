@@ -48,6 +48,9 @@ public class StatisticManager : MonoBehaviour
             Slider5 = value5,
             Slider6 = value6
         };
+
+        //esqueceste-te disto pa
+        actionList.Add(action);
     }
 
 

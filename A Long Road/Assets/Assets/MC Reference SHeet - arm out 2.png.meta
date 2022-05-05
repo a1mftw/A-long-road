@@ -20,6 +20,9 @@ TextureImporter:
   - first:
       213: 1580255232537512707
     second: MC Reference SHeet - arm out 2_5
+  - first:
+      213: -8874569047407863013
+    second: MC Reference SHeet - arm out 2_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -230,6 +233,27 @@ TextureImporter:
       bones: []
       spriteID: 30bc9dde2c13ee510800000000000000
       internalID: 1580255232537512707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MC Reference SHeet - arm out 2_6
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 240
+        width: 356
+        height: 544
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1bd39a887237d480800000000000000
+      internalID: -8874569047407863013
       vertices: []
       indices: 
       edges: []

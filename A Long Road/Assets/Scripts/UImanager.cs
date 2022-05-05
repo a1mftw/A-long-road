@@ -14,6 +14,7 @@ public class UImanager : MonoBehaviour
     public Slider slider5;
     public Slider slider6;
     public Text topText;
+    public Text downText;
     StatisticManager manager;
     void Start()
     {
@@ -39,6 +40,14 @@ public class UImanager : MonoBehaviour
         slider4.value = manager.Slider4;
         slider5.value = manager.Slider5;
         slider6.value = manager.Slider6;
+
+        for(int i=manager.actionList.Count; i < 0; i--)
+        {
+            downText.text = "You "+manager.actionList[i].actionName+" you got "+manager.actionList[i].Slider1+" points in Action, "
+                + manager.actionList[i].Slider2 + " points in Social," + manager.actionList[i].Slider3 +" points in Mastery,"
+                + manager.actionList[i].Slider4 +" points in Achievement,"+ manager.actionList[i].Slider5 +" points in Immersion and"
+                + manager.actionList[i].Slider6 +" points in Creativity. \n";
+        }
     }
 
 
