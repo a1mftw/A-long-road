@@ -17,14 +17,7 @@ public class StatisticManager : MonoBehaviour
         public int Slider6;
     }
 
-
-    public int Slider1 = 0;
-    public int Slider2 = 0;
-    public int Slider3 = 0;
-    public int Slider4 = 0;
-    public int Slider5 = 0;
-    public int Slider6 = 0;
-
+    public int[] SliderValues = new int[] { 0,0,0,0,0,0};
     public List<Action> actionList;
 
     public void Awake()
@@ -59,23 +52,23 @@ public class StatisticManager : MonoBehaviour
     {
         foreach (var action in actionList)
         {
-            AddStats(action.Slider1, Slider1);
-            AddStats(action.Slider2, Slider2);
-            AddStats(action.Slider3, Slider3);
-            AddStats(action.Slider4, Slider4);
-            AddStats(action.Slider5, Slider5);
-            AddStats(action.Slider6, Slider6);
+            AddStats(action.Slider1, 0);
+            AddStats(action.Slider2, 1);
+            AddStats(action.Slider3, 2);
+            AddStats(action.Slider4, 3);
+            AddStats(action.Slider5, 4);
+            AddStats(action.Slider6, 5);
         }
     }
 
     private void AddStats(int value, int slider)
     {
-        if (slider + value > 100)
-            slider = 100;
-        else if (slider + value < 0)
-            slider = 0;
+        if (SliderValues[slider] + value > 100)
+            SliderValues[slider] = 100;
+        else if (SliderValues[slider] + value < 0)
+            SliderValues[slider] = 0;
         else
-            slider += value;
+            SliderValues[slider] += value;
     }
 
 }

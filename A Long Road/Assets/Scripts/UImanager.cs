@@ -34,14 +34,14 @@ public class UImanager : MonoBehaviour
             topText.text = "Well, nothing I can do if you chose to leave, one must take the path they find right! Thank you for playing!";
         }
 
-        slider1.value = manager.Slider1;
-        slider2.value = manager.Slider2;
-        slider3.value = manager.Slider3;
-        slider4.value = manager.Slider4;
-        slider5.value = manager.Slider5;
-        slider6.value = manager.Slider6;
+        slider1.value = manager.SliderValues[0];
+        slider2.value = manager.SliderValues[1];
+        slider3.value = manager.SliderValues[2];
+        slider4.value = manager.SliderValues[3];
+        slider5.value = manager.SliderValues[4];
+        slider6.value = manager.SliderValues[5];
 
-        for(int i=manager.actionList.Count; i < 0; i--)
+        for(int i=manager.actionList.Count-1; i >= 0; i--)
         {
             downText.text = "You "+manager.actionList[i].actionName+" you got "+manager.actionList[i].Slider1+" points in Action, "
                 + manager.actionList[i].Slider2 + " points in Social," + manager.actionList[i].Slider3 +" points in Mastery,"

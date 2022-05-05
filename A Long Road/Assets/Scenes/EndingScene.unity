@@ -696,7 +696,7 @@ MonoBehaviour:
   slider5: {fileID: 518430854}
   slider6: {fileID: 31029467}
   topText: {fileID: 1305282428}
-  downText: {fileID: 0}
+  downText: {fileID: 648411036}
 --- !u!1 &287697474
 GameObject:
   m_ObjectHideFlags: 0
