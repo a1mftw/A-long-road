@@ -11,7 +11,6 @@ public class InventorySystem : MonoBehaviour
     public bool ladder = false;
     public bool holding = false;
     bool nextToObject = false;
-    bool isflipped = false;
     GameObject go;
     GameObject holdingObject;
     public GameObject ladderPrefab;
@@ -109,6 +108,11 @@ public class InventorySystem : MonoBehaviour
             holder.transform.localPosition = new Vector2(2.1f, holder.transform.localPosition.y);
         else if (Input.GetAxisRaw("Horizontal") < 0)
             holder.transform.localPosition = new Vector2(-2.1f, holder.transform.localPosition.y);
+
+        if(holding)
+            GetComponent<Animator>().SetBool("isHolding",true);
+        else
+            GetComponent<Animator>().SetBool("isHolding", false);
 
     }
 
