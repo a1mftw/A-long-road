@@ -15,6 +15,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     private bool isTurned;
     public bool inDialogue;
+    public bool npcQuest;
 
     Vector2 movement;
     Vector2 direction;
@@ -80,12 +81,21 @@ public class PlayerBehaviour : MonoBehaviour
         {
             if(!inDialogue)
             {
+
                 npcTrigger.TriggerDialogue();
                 inDialogue = true;
             }
             else
             {
-                dialogueManager.DisplayNextSentence(); 
+                if (npcQuest)
+                {
+                dialogueManager.DisplayNextSentence(true);
+
+                }
+                else
+                {
+                    dialogueManager.DisplayNextSentence(false);
+                }
             }
         }
 
@@ -109,6 +119,16 @@ public class PlayerBehaviour : MonoBehaviour
                 cursorSpriteObject.transform.position = collision.GetComponentInChildren<Transform>().position - new Vector3(-1.2f, -1.2f);
                 //activate sprite component
                 cursorSpriteObject.GetComponent<SpriteRenderer>().enabled = true;
+
+                if (collision.name == "NPC (8)")
+                {
+                    npcQuest = true;
+                }
+                else
+                {
+                    npcQuest = false;
+                }
+                
                 break;
 
 

@@ -1,3 +1,7 @@
+using System;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -37,17 +41,25 @@ public class DialogueManager : MonoBehaviour
        // DisplayNextSentence();
     } 
 
-    public void DisplayNextSentence ()
+    public void DisplayNextSentence (bool quest = false)
     {
         if (sentences.Count == 0)
         {
             EndDialogue();
+            if (quest)
+                StartQuest();
+           
             return;
         }
 
        sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence());
+    }
+
+    private void StartQuest()
+    {
+        SceneManager.LoadScene(3);
     }
 
     public void TypeNewSentence()
