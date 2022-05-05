@@ -12,6 +12,8 @@ public class InventorySystem : MonoBehaviour
     public bool holding = false;
     bool nextToObject = false;
     private bool hasPickedBall = false;
+    private bool hasPickedLadder = false;
+    private bool hasSavedCat = false;
     GameObject go;
     GameObject holdingObject;
     public GameObject ladderPrefab;
@@ -30,11 +32,11 @@ public class InventorySystem : MonoBehaviour
         if (item.name.Contains("ball"))
         {
             //action add
-            if(!hasPickedBall)
-            {
-                manager.AddNewAction("used the ball",20,0,10,10,0,10);
-                hasPickedBall = true;
-            }
+            //if(!hasPickedBall)
+            //{
+            //    manager.AddNewAction("used the ball",20,0,10,10,0,10);
+            //    hasPickedBall = true;
+            //}
 
             Drop(item.transform);
             ball = true;
@@ -42,22 +44,46 @@ public class InventorySystem : MonoBehaviour
             item.transform.localPosition = Vector3.zero;
             item.GetComponent<CircleCollider2D>().enabled = false;
 
+
+            holdingObject = item;
+            nextToObject = false;
+            holding = true;
+
         }
         else if(item.name.Contains("ladder"))
         {
+            //if(!hasPickedLadder)
+            //{
+                
+            //    hasPickedLadder = true;
+            //}
+
             Drop(item.transform);
             ladder = true;
             item.transform.parent = holder.transform;
             item.transform.localPosition = Vector3.zero;
             item.GetComponent<BoxCollider2D>().enabled = false;
-            
+
+
+            holdingObject = item;
+            nextToObject = false;
+            holding = true;
+
         }
-
-        holdingObject = item;
-        nextToObject = false;
-        holding = true;
-
-
+        else if(item.name.Contains("TREECAT"))
+        {
+            if(!hasSavedCat)
+            {
+                if(ball)
+                    manager.AddNewAction("threw the ball at the cat", 20, 0, 10, 10, 0, 10);
+                else if(ladder)
+                    manager.AddNewAction("climbed the ladder and scared the cat", 0, 0, 10, 20, 0, 30);
+                else
+                    manager.AddNewAction("shook the cat out of the tree", 20, 0, 20, 10, 0, 40);
+                item.GetComponent<Animator>().SetTrigger("Triggered");
+                hasSavedCat = true;
+            }
+        }
     }
 
 
