@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
+    public AudioClip hoverClip;
+    public AudioClip pressClip;
+
     //Quit
     public void Playgame (int sceneIndex)
     {
@@ -48,5 +51,14 @@ public class MainMenu : MonoBehaviour
         GameIsPaused = true; 
     }
 
+    public void HoverSound()
+    {
+        GameObject.Find("SFX Source").GetComponent<AudioSource>().PlayOneShot(hoverClip);
+    }
+
+    public void ClickSound()
+    {
+        GameObject.Find("SFX Source").GetComponent<AudioSource>().PlayOneShot(pressClip);
+    }
 
 }
