@@ -17,7 +17,13 @@ public class InventorySystem : MonoBehaviour
     public GameObject ladderPrefab;
     public GameObject ballPrefab;
     public GameObject holder;
-    public StatisticManager manager;
+    private StatisticManager manager;
+
+
+    private void Start()
+    {
+        manager = GameObject.Find("StatisticManager").GetComponent<StatisticManager>();
+    }
 
     private void PickUp(GameObject item)
     {

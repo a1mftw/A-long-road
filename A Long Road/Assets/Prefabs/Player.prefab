@@ -128,6 +128,8 @@ GameObject:
   - component: {fileID: 8666990952129468752}
   - component: {fileID: 8740382992303801563}
   - component: {fileID: 8300259349333181133}
+  - component: {fileID: 8395950750992270451}
+  - component: {fileID: 6550406790500724285}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -292,3 +294,38 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.7749999
+--- !u!114 &8395950750992270451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8666990952129468759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f23d518a9dcd62748a51b10b4acfd3dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bigRoof: {fileID: 0}
+  firstRoof: {fileID: 0}
+  wall: {fileID: 0}
+  pillar: {fileID: 0}
+--- !u!114 &6550406790500724285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8666990952129468759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa580d4670e826543bc09313175d60c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: 0
+  ladder: 0
+  holding: 0
+  ladderPrefab: {fileID: 1529470232466473294, guid: 01ffa5a87b85d6f408f97607e47a2ae3, type: 3}
+  ballPrefab: {fileID: 6348553576838953263, guid: b5759f04dc93db84989d9f67d286a975, type: 3}
+  holder: {fileID: 1736143879497910616}
+  manager: {fileID: 0}
