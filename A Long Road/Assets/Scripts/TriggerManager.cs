@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TriggerManager : MonoBehaviour
 {
@@ -11,11 +12,11 @@ public class TriggerManager : MonoBehaviour
     public GameObject firstRoof;
     public GameObject wall;
     public GameObject pillar;
-
+    private StatisticManager manager;
 
     void Start()
     {
-        
+        manager = GameObject.Find("StatisticManager").GetComponent<StatisticManager>();
     }
 
     // Update is called once per frame
@@ -51,6 +52,16 @@ public class TriggerManager : MonoBehaviour
             firstRoof.SetActive(true);
             wall.SetActive(true);
             pillar.SetActive(true);
+        }
+
+        if (collision.name == "CarLeave")
+        {
+
+                manager.CalculateStats();
+            
+
+
+                SceneManager.LoadScene(2);
         }
     }
 

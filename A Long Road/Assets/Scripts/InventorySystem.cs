@@ -129,16 +129,7 @@ public class InventorySystem : MonoBehaviour
     private void Update()
     {
 
-        if(Input.GetKeyDown(KeyCode.O))
-        {
-            manager.CalculateStats();
-        }
-
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-
-            SceneManager.LoadScene(2);
-        }
+      
 
         if (nextToObject && Input.GetKeyDown(KeyCode.E))
         {
