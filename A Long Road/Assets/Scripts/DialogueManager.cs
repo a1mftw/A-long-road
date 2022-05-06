@@ -82,6 +82,7 @@ public class DialogueManager : MonoBehaviour
     {
         animator.SetBool("IsOpen", false);
         FindObjectOfType<PlayerBehaviour>().inDialogue = false;
+        sentences.Clear();
     }
 }
  
